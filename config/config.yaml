@@ -1,0 +1,17 @@
+perception:
+  input_topic: "fsds/Lidar"      # fsds/Lidar for sim // "cloud" for SICK // "os_sensor" for OUSTER
+
+  logs:
+    logging: false
+    log_path: "/home/fsdssim_user/Formula-Student-Driverless-Simulator/ros/src/putm_dv_perception/data/slam_imput.txt"
+
+  clustering: 
+    min_cluster_size: 1          # min number of points in cluster
+    max_cluster_size: 300        # max number of points in cluster
+    cluster_tolerance: 0.4       # max distance between points in cluster in [m]
+
+  cones_postion_constraints:
+    min_dist: 0.4                # min cone distance in [m]
+    max_dist: 25.0               # max cone distance in [m]
+    z_treshold: 2.0              # max cone hight in [m]
+    angle_threshold: 1.8         # max cone angle from center in [rad] 3.14 rad = 180 deg
